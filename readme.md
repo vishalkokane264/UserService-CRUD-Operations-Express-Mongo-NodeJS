@@ -1,6 +1,3 @@
-# UserService-CRUD-Operations-Express-Mongo-NodeJS
-CRUD Service created using Node, ExpressJS and MongoDB
-
 Creating Rest API's Endpoints for user service
 
 in .env file add 2 Variables
