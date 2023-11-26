@@ -16,3 +16,6 @@ POST    /user       add new user
 GET     /user/:id   get user by id
 DELETE  /user/:id   delete user by id
 PATCH   /user/:id   update user by id
+
+
+https://www.youtube.com/watch?v=MwiyQsWSlc0&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=7&ab_channel=NetNinja
