@@ -1,21 +1,108 @@
-Creating Rest API's Endpoints for user service
 
-in .env file add 2 Variables
-PORT <BACKEND_RUNNING_PORT>
-MONGO_URI <MONGO_URI_FROM cloud.mongodb.com database_access>
+## API Reference
 
-To Run the application: npm run dev
+#### User Schema
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `firstName`      | `string` | **Required**. First name of user |
+| `lastName`      | `string` | **Required**. Last name of user |
+| `age`      | `Number` | **Required**. Age of user |
 
-User service base url: http://localhost:7000/api
 
-Endpoints created
 
-Method Endpoint Desc
-GET     /user       get all users
-POST    /user       add new user
-GET     /user/:id   get user by id
-DELETE  /user/:id   delete user by id
-PATCH   /user/:id   update user by id
+#### Setup .env file with the variables
+
+```http
+PORT:<PORT_NUMBER>
+MONGO_URI:<MONGO_CONNECTION_URI_FROM_WEBSITE>
+```
+
+#### Start the application
+
+```http
+npm run dev
+```
+This will start the application on mongodb's successful connection on http://localhost:7000/api
+ 
+
+
+#### Create new user
+
+```http
+  POST /user
+
+  curl --location 'http://localhost:7000/api/user' \
+--header 'Content-Type: application/json' \
+--data '{
+    "firstName":"visal",
+    "lastName":"kokane",
+    "age":30
+}'
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `firstName`      | `string` | **Required**. First name of user |
+| `lastName`      | `string` | **Required**. Last name of user |
+| `age`      | `Number` | **Required**. Age of user |
+
+
+
+#### Get all users
+
+```http
+  GET /user
+```
+#### Get user by id
+
+```http
+  GET /user/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of user to fetch |
+
+
+
+
+#### Update user by id
+
+```http
+  PATCH /user
+
+  curl --location --request PATCH 'http://localhost:7000/api/user/${id}' \
+--header 'Content-Type: application/json' \
+--data '{
+    "firstName":"Vishal123"
+    ,"lastName":"Kokane",
+    "age":30
+}'
+
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of user to update |
+
+
+
+#### Delete user by id
+
+```http
+  DELETE /user/${id}
+
+  curl --location --request DELETE 'http://localhost:7000/api/user/${id}' \
+--data ''
+```
+
+#### Delete users
+
+```http
+  DELETE /user
+
+  curl --location --request DELETE 'http://localhost:7000/api/user' \
+--data ''
+```
 
 
 https://www.youtube.com/watch?v=MwiyQsWSlc0&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=7&ab_channel=NetNinja
