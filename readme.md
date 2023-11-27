@@ -6,8 +6,8 @@ MONGO_URI <MONGO_URI_FROM cloud.mongodb.com database_access>
 
 To Run the application: npm run dev
 
-
 User service base url: http://localhost:7000/api
+
 Endpoints created
 
 Method Endpoint Desc
