@@ -54,12 +54,12 @@ This will start the application on mongodb's successful connection on http://loc
 
 #### Get all users
 
-```http
+```
   GET /user
 ```
 #### Get user by id
 
-```http
+```
   GET /user/${id}
 ```
 
@@ -72,7 +72,7 @@ This will start the application on mongodb's successful connection on http://loc
 
 #### Update user by id
 
-```http
+```
   PATCH /user
 
   curl --location --request PATCH 'http://localhost:7000/api/user/${id}' \
@@ -92,7 +92,7 @@ This will start the application on mongodb's successful connection on http://loc
 
 #### Delete user by id
 
-```http
+```
   DELETE /user/${id}
 
   curl --location --request DELETE 'http://localhost:7000/api/user/${id}' \
@@ -101,7 +101,7 @@ This will start the application on mongodb's successful connection on http://loc
 
 #### Delete users
 
-```http
+```
   DELETE /user
 
   curl --location --request DELETE 'http://localhost:7000/api/user' \
