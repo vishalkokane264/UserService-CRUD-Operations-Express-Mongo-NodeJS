@@ -12,14 +12,14 @@
 
 #### Setup .env file with the variables
 
-```http
+```
 PORT:<PORT_NUMBER>
 MONGO_URI:<MONGO_CONNECTION_URI_FROM_WEBSITE>
 ```
 
 #### Start the application
 
-```http
+```
 npm run dev
 ```
 This will start the application on mongodb's successful connection on http://localhost:7000/api
@@ -28,7 +28,7 @@ This will start the application on mongodb's successful connection on http://loc
 
 #### Create new user
 
-```http
+```
   POST /user
 
   curl --location 'http://localhost:7000/api/user' \
